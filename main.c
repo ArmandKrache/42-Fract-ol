@@ -6,7 +6,7 @@
 /*   By: akrache <akrache@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 13:14:43 by akrache           #+#    #+#             */
-/*   Updated: 2019/02/07 14:43:50 by akrache          ###   ########.fr       */
+/*   Updated: 2019/11/02 16:57:23 by akrache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int				fract_usage(int r)
 	ft_putendl("               Ship");
 	ft_putendl("               Tippetts");
 	ft_putendl("               Thorn");
+	ft_putendl("               Sativa");
 	return (r);
 }
 
@@ -71,6 +72,8 @@ static int		display_fract(t_fract *tab, char *param)
 		fract_tab_init(tab, 4);
 	else if (!ft_strcmp(param, "Thorn") || !ft_strcmp(param, "thorn"))
 		fract_tab_init(tab, 5);
+	else if (!ft_strcmp(param, "Sativa") || !ft_strcmp(param, "sativa"))
+		fract_tab_init(tab, 6);
 	return (tab->act ? ft_display_again(tab, -1) : fract_usage(0));
 }
 
